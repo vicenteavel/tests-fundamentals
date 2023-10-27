@@ -8,7 +8,16 @@ interface ButtonProps {
 
 export const Button = ({ children, disabled, onClick }: ButtonProps) => {
   return (
-    <button style={{ backgroundColor: disabled ? "red" : "blue" }} onClick={() => {onClick(10)}}>
+    <button
+      style={{
+        backgroundColor: disabled ? "red" : "blue",
+        color: "white",
+        padding: 10,
+      }}
+      onClick={() => {
+        onClick(10);
+      }}
+    >
       {children}
     </button>
   );
